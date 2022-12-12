@@ -1,0 +1,103 @@
+public class HW_30112022 {
+
+   First level:  1) Вычислить сложность следующих алгоритмов
+
+        void test1(int n)         //	time complexity O(n)
+        {						  //	space complexity O(1)
+        if (n==1)
+        return;
+        for (int i=1; i<=n; i++)
+			for (int j=1; j<=n; j++)
+        System.out.println("*");
+        break;
+        }
+
+        void test2(int n)		//	time complexity O(n^2)
+        {						//	space complexity O(1)
+        if (n==1)
+        return;
+        for (int i=1; i<=n; i++)
+			for (int j=1; j<=n; j++)
+        System.out.println("*");
+        }
+
+        void test3(int n)		//	time complexity O(n^2)
+        {						//	space complexity O(n)
+        int a = 0;
+        for (i = 0; i < n; i++)
+			for (j = n; j > i; j--)
+        a = a + i + j;
+
+        }
+
+        void test4(int n)		//	time complexity O(n)
+        {						//	space complexity O(1)
+        int i, j, a = 0;
+        for (i = n/2; i <=n; i++)
+			for (j = 2; j <=n; j=j*2)
+        a=a+n/2;
+
+        }
+
+        2) Find the element that appears once in a sorted array
+        Given a sorted array in which all elements occur twice (one after the other) and one element appears only once.
+
+        Простое решение состоит в обходе массива слева направо. Поскольку массив отсортирован, мы легко можем найти нужный элемент.
+
+		void findElement(int){
+		int[] arr = {1, 1, 2, 2, 3, 4, 4, 5, 5, 6, 6,};
+
+        for (int i = 0; i < arr.length-1; i = i + 2) {
+            if (arr[i] != arr[i+1]){
+                System.out.print(arr[i]);
+            break;}
+		}
+
+
+        Задачки со звёздочкой - вычислить сложность в лучшем и худшем случае.
+
+		Best Ω(1)  Worth O(n)
+
+		3) void test5(int n)
+        {
+        int a = 0, i = n;
+        while (i > 0) {
+        a += i;
+        i /= 2;
+        }
+        }
+
+
+		Best Ω(1)  Worth O(n)
+
+        void method(int a, int b) {
+        while (a != b) {
+        if (a > b) {
+        a = a - b;
+        } else {
+        b = b - a;
+        }
+        }
+        }
+
+		Best O(n)  Worth O(n^3)
+
+        void method2(int n) {
+        for (int i = 0; i < n / 2; i++) {
+			for (int j = 1; j + n / 2 <= n; j++) {
+				for (int k = 1; k <= n; k = k * 2) {
+        System.out.println("I am expert!");
+        }
+        }
+        }
+        }
+
+		Best O(n)  Worth O(n^2)
+
+        void method3(int n) {
+        for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j = j + i) {
+        System.out.println("I am expert!");
+        }
+        }
+        }
